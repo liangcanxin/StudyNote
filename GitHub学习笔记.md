@@ -91,7 +91,7 @@
 1. 删除文件通过指令（*rm -rf 文件名*）
 2. 在Git中删除文件通过指令（*git rm 文件名*）
 3. 提交本次删除文件操作通过指令（*git commit -m ‘备注信息’*）
-* 注意：由于是命令行界面操作，涉及相关的文件命令行指令，具体可参考[cd、ls等命令](”https://blog.csdn.net/jiahehao/article/details/1870970“)和[vi模式切换]("https://blog.csdn.net/jackalfly/article/details/7546878")
+* 注意：由于是命令行界面操作，涉及相关的文件命令行指令，具体可参考[cd、ls等命令](https://blog.csdn.net/jiahehao/article/details/1870970)和[vi模式切换](https://blog.csdn.net/jackalfly/article/details/7546878)
 #### Git管理远程仓库GitHub
 * 使用远程仓库的目的：备份，实现代码共享，集中化管理代码
 * Git克隆操作目的：将远程仓库的代码（GitHub对应的项目）复制到本地，进入本地操作
@@ -104,7 +104,7 @@
 **解决方法：**该项目被默认为私有项目，本地操作的没有提交到远程仓库的权限，需要输入用户名密码，或者远程地址采用这种类型。
 **具体操作：**
 * 通过指令（*vi .git/config*）进入配置文件config中，将[remote “origin”]  url = http://github.com/用户名/仓库名.git 修改为[remote “origin”] url = https://用户名：密码@github.com/用户名/仓库名.git
-* 如果该方式解决不了，建议参考[处理方式]("https://blog.csdn.net/jingtingfengguo/article/details/51892864")
+* 如果该方式解决不了，建议参考[ssh本地配置](https://blog.csdn.net/jingtingfengguo/article/details/51892864)和[本地缓存设置](https://www.jianshu.com/p/abf56f1de643)
 #### GitHub page搭建个人网站
 * 个人站点搭建
 **搭建步骤：**
