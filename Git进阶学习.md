@@ -1,6 +1,7 @@
 ### Git的学习进阶
 **注意：** 本进阶笔记参考[Git 实用教程（小甲鱼）](https://www.bilibili.com/video/av8261658)
 #### 初次使用Git前的配置
+*注意：如果在Git的配置中出现问题，可参考[GitHub和Git入门](https://github.com/liangcanxin/StudyNote/blob/master/GitHub%E5%92%8CGit%E5%85%A5%E9%97%A8.md)
 * 在命令行模式里输入以下命令
 ~~~
 git config --global user.name "用户名"
