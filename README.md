@@ -7,7 +7,7 @@
 
  * [markdown基础语法入门](https://github.com/liangcanxin/StudyNote/blob/master/markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
 
- * [GitHub和Git基础使用入门](https://github.com/liangcanxin/StudyNote/blob/master/GitHub%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
+ * [GitHub和Git基础使用入门](https://github.com/liangcanxin/StudyNote/blob/master/GitHub%E5%92%8CGit%E5%85%A5%E9%97%A8.md)
 
  * [Git进阶学习](https://github.com/liangcanxin/StudyNote/blob/master/Git%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0.md)
 
