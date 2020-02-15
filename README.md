@@ -11,5 +11,5 @@
 
  * [Git进阶学习](https://github.com/liangcanxin/StudyNote/blob/master/Git%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0.md)
 
-* [VIM快速入门](https://github.com/liangcanxin/StudyNote/blob/master/Git%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0.md)
+ * [VIM快速入门](https://github.com/liangcanxin/StudyNote/blob/master/VIM%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.md)
 
