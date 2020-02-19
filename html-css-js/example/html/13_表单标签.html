@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13_表单标签</title>
+</head>
+
+<body>
+    <h1>13.表单标签</h1>
+    <h2>基本标签</h2>
+    <p>form、input、textarea、select、label ...</p>
+    <h2>input标签</h2>
+    <p>该标签为单标签，由一个type属性，决定该标签为什么控件</p>
+    <h3>其他属性</h3>
+    <p>表单标签常见的一些其他属性有checked、disabled、name、for ...</p>
+    <p>示例</p>
+    <pre>
+        &lt;form action="https://www.baidu.com" method="POST"&gt;
+            &lt;!-- action属性定义在提交表单时执行的动作。向服务器提交表单的通常做法是使用提交按钮，通常，表单会被提交到web服务器上的网页。如果省略action属性，则action会被设置为当前页面 --&gt;
+            &lt;!-- method属性规定在提交表单时所用的http方法(get或post) --&gt;
+            &lt;fieldset&gt;
+                &lt;legend>Personal information：&lt;/legend&gt;
+                &lt;!-- fieldset元素组合表单中的相关数据，legend元素为fieldset元素定义标题 --&gt;
+                username：
+                &lt;!-- 以下为文本输入表单 --&gt;
+                &lt;input type="text" name="username" placeholder="username"&gt;
+                password:
+                &lt;input type="password" name="password" placeholder="password"&gt;
+                &lt;!-- 如果要正确地被提交，每个输入字段必须设置一个name属性 --&gt; &lt; br &gt;
+                sex:
+                &lt;!-- 以下为单选按钮输入表单 --&gt;
+                &lt;input type="radio" name="sex" value="male" checked>male&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;input type="radio" name="sex" value="female"&gt;female&lt;br&gt;
+                own vehicle:
+                &lt;input type="checkbox" name="vehicle" value="bike"&gt;bike&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;input type="checkbox" name="vehicle" value="car"&gt;car
+                &lt;input type="checkbox" name="vehicle" value="disabled" disabled&gt;disabled chocie&lt;br&gt;
+                &lt;select name="sports" &gt; 
+                    &lt;option value="choices" selected disabled&gt;--please choose your favorite sport--&lt;/option&gt;
+                    &lt;option value="basketball" selected &gt; basketball &lt; /option &gt; 
+                    &lt; option value="football" &gt; football &lt; /option &gt; 
+                    &lt; option value="tennis" &gt; tennis &lt; /option &gt; 
+                &lt;/select &gt; &lt; br &gt;
+                &lt;textarea name="information" cols="30" rows="10" &gt; the information about ... &lt; /textarea &gt; &lt; br &gt;
+                &lt;input type="submit" value="submit"&gt;
+            &lt;/fieldset &gt;
+        &lt;/form &gt;
+        &lt;button type="button" onclick="alert('Hello World!')"&gt; click me! &lt; /button &gt; 
+    </pre>
+    <p>展示效果</p>
+    <form action="https://www.baidu.com" method="POST">
+        <!-- action属性定义在提交表单时执行的动作。向服务器提交表单的通常做法是使用提交按钮，通常，表单会被提交到web服务器上的网页。如果省略action属性，则action会被设置为当前页面 -->
+        <!-- method属性规定在提交表单时所用的http方法(get或post) -->
+        <fieldset>
+            <legend>Personal information：</legend>
+            <!-- fieldset元素组合表单中的相关数据，legend元素为fieldset元素定义标题 -->
+            username：
+            <!-- 以下为文本输入表单 -->
+            <input type="text" name="username" placeholder="username">
+            password:
+            <input type="password" name="password" placeholder="password">
+            <!-- 如果要正确地被提交，每个输入字段必须设置一个name属性 --><br>
+            sex:
+            <!-- 以下为单选按钮输入表单 -->
+            <input type="radio" name="sex" value="male" checked>male&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="sex" value="female">female<br>
+            own vehicle:
+            <input type="checkbox" name="vehicle" value="bike">bike&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="vehicle" value="car">car
+            <input type="checkbox" name="vehicle" value="disabled" disabled>disabled chocie<br>
+            the favorite sports:
+            <select name="sports">
+                <option value="choices" selected disabled>--please choose your favorite sport--</option>
+                <option value="basketball">basketball</option>
+                <option value="football">football</option>
+                <option value="tennis">tennis</option>
+            </select><br>
+            <textarea name="information" cols="30" rows="10">the information about ...</textarea><br>
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+    <button type="button" onclick="alert('Hello World!')">click me!</button>
+    <hr>
+    <a href="12_表格标签.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="14_div和span.html">最后一页</a>
+</body>
+
+</html>

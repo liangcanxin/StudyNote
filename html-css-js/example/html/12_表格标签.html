@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_表格标签</title>
+</head>
+<body>
+    <h1>12.表格标签</h1>
+    <h2>基本标签</h2>
+    <p>table、tr、th、td、caption 等</p>
+    <p>注：如果有嵌套关系，需要符合嵌套规范</p>
+    <h2>语义化标签</h2>
+    <p>thead、tbody、tfoot</p>
+    <p><em>注：在一个table中，tbody是可以出现多次的，但是thead和tfoot只能出现一次</em></p>
+    <h2>表格属性</h2>
+    <ul>
+        <li>align：left、center、right(字体居左中右)</li>
+        <li>valign：top、middle、bottom(字体居上中下)</li>
+        <li>border、cellpadding、cellspacing、rowspan、colspan(表格边框、单元格边距、单元格间距、合并行、合并列</li>
+    </ul>
+    <p>示例</p>
+    <pre>
+        &lt;table border="1" align="middle"&gt;
+            &lt;caption&gt;表X&lt;/caption&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th colspan="2"&gt;heading&lt;/th&gt;
+                    &lt;!-- &lt;th&gt;heading2&lt;/th&gt; --&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td rowspan="2"&gt;row1$2，cell1&lt;/td&gt;
+                    &lt;td&gt;row1，cell2&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;!-- &lt;td&gt;row2，cell1&lt;/td&gt; --&gt;
+                    &lt;td&gt;row2，cell2&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+            &lt;tfoot&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;row3，cell1&lt;/td&gt;
+                    &lt;td&gt;row3，cell2&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tfoot&gt;
+        &lt;/table&gt;
+    </pre>
+    <p>展示效果</p>
+    <table border="1" align="middle">
+        <caption>表X</caption>
+        <thead>
+            <tr>
+                <th colspan="2">heading</th>
+                <!-- <th>heading2</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">row1$2，cell1</td>
+                <td>row1，cell2</td>
+            </tr>
+            <tr>
+                <!-- <td>row2，cell1</td> -->
+                <td>row2，cell2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>row3，cell1</td>
+                <td>row3，cell2</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <a href="11_列表标签.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="13_表单标签.html">下一页</a>
+</body>
+</html>
