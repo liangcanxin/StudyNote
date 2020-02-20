@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_css段落样式</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        #introduction{
+            float: left;
+        }
+        #text{
+            font-size: 16px;
+            font-family: 楷体;
+            border: solid 5px #ffffff;
+            background-color:azure;
+            height: 560px;
+            width: 650px;
+            text-indent: 2em;
+            line-height: 16px;
+            word-break: break-all;
+            overflow:auto;
+            float: right; 
+            text-transform: capitalize;
+            word-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="introduction">
+    <h1>05. css段落样式</h1>
+    <h2>文本修饰</h2>
+    <p>写法：选择器{text-decoration:值(可取值如下所示);}</p>
+    <ul>
+        <li>下划线：underline</li>
+        <li>删除线：line-through</li>
+        <li>上划线：overline</li>
+        <li>不添加任何修饰：none</li>
+    </ul>
+    <p>注：同一个文本可以同时添加多个文本修饰<em>(line-through underline overline)</em></p>
+    <h2>文本大小写<strong>(针对英文段落)</strong></h2>
+    <p>写法：选择器{text-transform：值(可取值如下所示);}</p>
+    <ul>
+        <li>小写：lowercase</li>
+        <li>大写：uppercase</li>
+        <li>只针对首字母大写：capitalize</li>
+    </ul>
+    <h2>文本首行缩进</h2>
+    <p>写法：选择器{text-indent:2em;}</p>
+    <p>em单位是相对单位，1em永远都是跟字体的大小相同</p>
+    <h2>文本对齐方式</h2>
+    <p>写法：选择器{text-align:对齐方式;}</p>
+    <P>对齐方式有left、right、center、justify(justify是两端对齐)</P>
+    <h2>定义行高</h2>
+    <p>行高是指一行文字的高度，上边距和下边距的等价关系</p>
+    <p>默认行高不是固定值，而是变化的。根据当前字体的大小在不断地变化</p>
+    <p>写法：选择器{line-height:值;}</p>
+    <p>取值可以是number(px)或者scale(比例值，跟文字大小成比例的)</p>
+    <h2>定义文本间距</h2>  
+    <p>字之间的间距：letter-spacing</p>  
+    <p>词之间的间距：word-spacing</p>
+    <h2><strong>英文和数字不自动折行的处理方式</strong></h2>
+    <ul>
+        <li>word-break:break-all;(非常强烈地折行)</li>
+        <li>word-wrap:break-word;(不是那么强烈地折行，会产生一些空白区域)</li>
+    </ul>
+    <a href="04_css文字样式.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="06_css复合样式.html">下一页</a>
+    </div>
+    <div id="text">
+        <h3>CSS的诞生与发展</h3>
+        <p>1994年，哈肯·维姆·莱提出了CSS的最初建议。伯特·波斯当时正在设计一个叫做Argo的浏览器，他们决定一起合作设计CSS。当时已经有过一些样式表语言的建议了，但CSS是第一个含有“层叠”的主意的。在CSS中，一个文件的样式可以从其他的样式表中继承下来。读者在有些地方可以使用他自己更喜欢的样式，在其他地方则继承，或“层叠”作者的样式。这种层叠的方式使作者和读者都可以灵活地加入自己的设计，混合各人的爱好。哈肯·莱于1994年在芝加哥的一次会议上第一次展示了CSS的建议，1995年他与波斯一起再次展示这个建议。当时W3C刚刚创建，W3C对CSS的发展很感兴趣，它为此组织了一次讨论会。哈肯、波斯和其他一些人（比如微软的托马斯·里尔登）是这个项目的主要技术负责人。1996年底，CSS已经完成。1996年12月，哈肯·莱与伯特·波斯发布了CSS规范的第1个版本。这也成了哈肯·莱的博士论文的一部分。当时已有的主流浏览器的内核架构完全不适合解析CSS的语法，加上早年设计师滥用HTML标签来表达样式(这导致“标签汤”(tagsoup)这一骂名的出现)、且漠不关心代码校验，所以CSS等到几年之后才流行起来。1998年，浏览器市场份额被微软公司的Internet Explorer 4和网景公司的Netscape Navigator 4两大浏览器巨头所占据。CSS出现后，微软的IE浏览器走在了逐步实现CSS第1版标准的前列。但是因为不重视问题修补，导致遗留Bug很多，这也使得IE浏览器长期为人们诟病。网景则把重心放在了网页脚本语言的开发上，但很快被微软模仿。网景在90年代末和微软展开的浏览器大战中最终一败涂地，走向破产边缘，但网景也成功推出了日后广泛流行于网页设计中的JavaScript语言。浏览器大战使得网页设计人员深受其害，因为不同浏览器支持的语法规则不太一样，网页设计人员不得不为IE浏览器和网景浏览器的浏览器分别设计一套网页。新成立的民间设计人员团体“网页标准计划”(WaSP)发动水军将W3C的建议宣扬为标准，并批评还未加盟W3C标准的业界厂商。</p>
+        <p> 1997年初，W3C组织了专门管CSS的工作组，其负责人是克里斯·里雷。这个工作组开始讨论第1版中没有涉及到的问题，其结果是1998年5月出版的第2版规则。网页标准计划的7位成员成立了“CSS武士团”（CSS Samurai），指出Opera浏览器和IE浏览器在支持CSS方面存在的诸多问题。Opera公司着手解决了问题，但微软并未解决。网页标准计划也积极劝说网景公司和Macromedia公司分别改进其产品对CSS标准的支持。2003年，Dave Shea推出了一个名为“CSS禅意花园”("CSS Zen Garden")的站点，向人们展示出仅通过应用不同页面样式规则，就可以实现对网页艺术风格的焕然一新。这个网站在网页设计相关人群中产生了不小影响。</p> 
+        <p>从2006年到2009年，“DIV+CSS”布局逐步取代缺乏灵活性的传统表格布局，无表格网页设计成为网页内容布局的主流方案。此时也出现了一些为了跟风而滥用DIV布局的情况，比如将&lt;h1&gt;和&lt;h2&gt;等本身已有语义的标签也改用&lt;div&gt;标签替代。</p>    
+        <p>CSS3引入的简单动画功能使得CSS也开始涉足以往只应由JavaScript负责的效果交互工作。到2017年为止，第3版规则还未完备。</p>
+        <hr>
+        <p>translate:</p>
+        <h3>The birth and development of CSS</h3>
+        <p>In 1994, hucken WIM lay put forward the initial suggestion of CSS. Burt Persie was designing a browser called Argo, and they decided to work together to design CSS. At that time, there were some suggestions for stylesheet language, but CSS was the first one with the idea of "cascading". In CSS, the style of one file can be inherited from other style sheets. Readers can use their own preferred styles in some places, and inherit, or "cascade" the author's styles in others. In this way, both the author and the reader can flexibly add their own design and mix their hobbies. Hucken lay first presented the CSS proposal at a conference in Chicago in 1994, and again with Persia in 1995. At that time, W3C was just created, and W3C was very interested in the development of CSS. It organized a seminar for this purpose. Hacken, Persia and others (such as Microsoft's Thomas Reardon) are the main technical directors of the project. By the end of 1996, CSS had been completed. In December 1996, Hacken lay and Bert Persia released the first version of the CSS specification. It also became part of Haken lay's doctoral dissertation. At that time, the core architecture of the existing mainstream browser was completely not suitable for parsing the syntax of CSS. In addition, in the early years, designers abused HTML tags to express styles (which led to the emergence of the infamous "tagsoup") and ignored code validation, so CSS was not popular until a few years later. In 1998, browser market share was occupied by Internet Explorer 4 of Microsoft and Netscape Navigator 4 of Netscape. After the emergence of CSS, Microsoft's IE browser is in the forefront of gradually realizing the first version of CSS standard. However, due to the lack of attention to problem repair, there are many bugs left behind, which also makes IE browser criticized by people for a long time. Netscape focuses on the development of Web script language, but it is quickly imitated by Microsoft. Netscape was defeated in the browser war with Microsoft at the end of 1990s, and it was on the verge of bankruptcy. However, Netscape also successfully launched the JavaScript language widely used in Web Design in the future. Browser Wars make web designers suffer, because different browsers support different syntax rules, web designers have to design a set of web pages for IE browser and Netscape browser respectively. The web standards program (WASP), a new non-governmental group of designers, launched the navy to promote W3C's recommendations as standards, and criticized the industry's manufacturers that have not joined the W3C standard.</p>
+        <p>At the beginning of 1997, W3C organized a working group dedicated to CSS, whose leader was Chris Riley. The working group began to discuss issues not covered in the first edition, which resulted in the second edition of the rules, published in May 1998. Seven members of the web standards program set up CSS samurai, pointing out that there are many problems in supporting CSS in opera browser and IE browser. Opera started to solve the problem, but Microsoft didn't. The web standards program has also been active in persuading Netscape and Macromedia to improve their product support for CSS standards, respectively. In 2003, Dave Shea launched a website called "CSS Zen Garden", which shows that by applying different page style rules, you can achieve a new artistic style of web pages. The site has had a significant impact on the web design community.</p> 
+        <p>From 2006 to 2009, the layout of "div + CSS" gradually replaced the traditional table layout which lacked flexibility, and the design of web page without table became the mainstream scheme of web content layout. At this time, there are also some cases of abusing div layout for the sake of following the trend, such as replacing the tags with < div > tags with < H1 > and < H2 > tags with their own semantics.</p> 
+        <p>The simple animation function introduced by CSS3 makes CSS start to involve in the effect interaction work that only JavaScript is responsible for in the past. As of 2017, the third version of the rules is not complete.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_css基础语法</title>
+    <link rel="stylesheet" href="../reset.css">
+</head>
+<body>
+    <h1>01. css基础语法</h1>
+    <h2>写法</h2>
+    <p>选择器{属性1:值1; 属性2:值2; ... 属性n:值m;</p>
+    <h2>常用属性</h2>
+    <ul>
+        <li>width:选择器的宽度</li>
+        <li>height:选择器的高度</li>
+        <li>background-color:选择器的背景色</li>
+    </ul>
+    <h2>网页常用的长度单位</h2>
+    <ol>
+        <li>px:像素</li>
+        <li>%:百分比</li>
+    </ol>
+    <p>解释</p>
+    <p>外容器1：600px&nbsp;&nbsp;&nbsp;&nbsp;当前容器50%：300px</p>
+    <p>外容器2：400px&nbsp;&nbsp;&nbsp;&nbsp;当前容器50%：200px</p>
+    <h2>css样式引入方式</h2>
+    <h3>内联样式</h3>
+    <p>内联样式是写在html标签内的，通过style属性调用；例如：&lt;p style="height: auto;"&gt;&lt;/p&gt;</p>
+    <h3>内部样式</h3>
+    <ul>
+        <li>
+            内部样式一般写在head标签中，采用style标签包围起来。例如：&lt;style&gt;div{height: auto;}&lt;/style&gt;
+        </li>
+        <li>
+            优势：内部样式可以实现html标签的样式复用、复合W3C的规范标准，同时实现网页的html结构和css样式分离
+        </li>
+    </ul>   
+    <h3>外部样式</h3>
+    <ul>
+        <li>
+            外部样式单独建立一个css文件
+        </li>
+        <li>
+            引入方式1：通过link标签引入外部样式，rel属性指定资源跟页面的关系，href属性指定资源的地址，一般将link标签放置于head标签中；例如：&lt;link rel="stylesheet" href="../reset.css"&gt;
+        </li>
+        <li>
+            引入方式2：通过@import方式引入外部样式，但是这种引入方式存在不少问题，<strong>不建议使用</strong>，具体原因：<a href="https://www.cnblogs.com/my--sunshine/p/6872224.html">参见</a>
+        </li>
+    </ul>          
+    <h2>css中的颜色表示法</h2>
+    <h3>单词表示法</h3>
+    <p>单词：red、blue、green、yellow...</p>
+    <h3>十六进制表示法：0123456789abcdef，如#4e4f44</h3>
+    <h3>rgb三原色表示法</h3>
+    <p>例如rgb(255,255,255)，取值范围0~255</p>
+    <p><em>颜色提取方式：使用<a href="https://www.baidufe.com/fehelper">fhhelper插件</a>或者Photoshop颜色提取器</em></p>
+    <hr>
+    <a href="01_css基础语法.html">这是第一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="02_css背景样式.html">下一页</a>
+</body>
+</html>
