@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_css优先级</title>
+</head>
+<body>
+    <h1>09. css优先级</h1>
+    <h2>(1) 相同样式优先级</h2>
+    <p>当设置相同样式时，后面的优先级较高，也就是跟引入 的先后顺序有关，但是一般不建议出现重复设置相同样式的情况</p>
+    <h2>(2) 内部样式与外部样式</h2>
+    <p>内部样式与外部样式优先级相同，如果都设置了相同样式，那么后写的引入方式优先级高，也就是跟样式表引入的顺序有关</p>
+    <h2>(3) 单一样式优先级</h2>
+    <p>style行间&nbsp;&gt;id&nbsp;&gt;class&nbsp;&gt;tag&nbsp;&gt;*&nbsp;&gt;继承</p>
+    <p><em>注：如果按照权重的方式进行比较，可以认为大致如下</em></p>
+    <ul>
+        <li>style行间 权重：1000</li>
+        <li>id 权重：100</li>
+        <li>class 权重：10</li>
+        <li>tag 权重：1</li>
+    </ul>
+    <h2>(4) !important</h2>
+    <p>提升样式优先级，这不是规范方式，不建议使用（此外，该方式不能针对继承的属性进行优先级的提升）</p>
+    <h2>(5) (标签+类)vs单类</h2>
+    <p>正常情况下，标签和类的优先级会比单类的优先级大</p>
+    <h2>(6) 群组优先级</h2>
+    <p>群组选择器与单一选择器的优先级相同，因而，如果同时存在相同的标签，那么靠后写的优先级高</p>
+    <h2>(7) 层次优先级</h2>
+    <p>对于层次选择器，一般建议层次在三层以内，多了会变得复杂，代码可读性变差</p>
+    <ol>
+        <li>权重比较
+            <ul>
+                <li>ul li .box p input{} &nbsp;&nbsp;-&gt;&nbsp;1+1+10+1+1</li>
+                <li>.hello span #elem{} &nbsp;&nbsp;-&gt;&nbsp;10+1+100</li>
+            </ul>
+        </li>
+        <li>约分比较
+            <ul>
+                <li>ul li .box p input{} &nbsp;&nbsp;-&gt;&nbsp;li p input</li>
+                <li>.hello span #elem &nbsp;&nbsp;-&gt;&nbsp;#elem</li>
+            </ul>
+        </li>
+    </ol>
+    <p>==================</p>
+    <a href="08_css继承.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="10_css盒子模型.html">下一页</a>
+    <!-- 未完成样式表编写 -->
+    <!-- 未完成样式表编写 -->
+    <!-- 未完成样式表编写 -->
+</body>
+</html>

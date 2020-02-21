@@ -4,6 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>07_css选择器</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body{
+            background-color: aliceblue;
+            font: 16px 楷体;
+        }
+        #all{
+            background-color: antiquewhite;
+        }
+        #only{
+            background-color: springgreen;
+        }
+        .only-class{
+            background-color: bisque;
+        }
+        .only-class+div{
+            background-color: #999999;
+        }
+        .with-a-tab{
+            background-color: beige;
+        }
+        .with-a-tab a{
+            color: chartreuse;
+        }
+        .with-a-tab a:hover{
+            color: darkgray;
+        }
+        .with-table-tab{
+            background-color: #ffffff;
+            width: auto;
+        }
+        .with-table-tab th{ 
+            background-color: burlywood;
+            width: 100px;
+        }
+        .with-table-tab tr:nth-of-type(odd){
+            background-color: bisque;
+            width: 100px;
+        }
+        .with-table-tab tr:nth-of-type(even){
+            background-color: #eeeeee;
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
     <h1>07. css选择器</h1>
@@ -89,5 +133,49 @@
             a{}&nbsp;&nbsp;&nbsp;&nbsp;a:hover{}
         </li>
     </ol>
+    <p>示例</p>
+    <div id="all">
+        <div id="only">这是一个css选择器为id类型的div标签</div>
+        <div class="only-class">这是一个css选择器为class类型的div标签</div>
+        <div>这是一个css选择器为标签选择器的div标签</div>
+        <div class="with-a-tab"><a href="https://www.baidu.com">百度一下</a>&nbsp;&nbsp;这是一个带有伪类选择器的a标签</div>
+        <div class="with-table-tab">
+            <table>
+                <caption>这是一个隔行换色的表格</caption>
+                <tr>
+                    <th>标题1</th>
+                    <th>标题2</th>
+                </tr>
+                <tr>
+                    <td>row1,cols1</td>
+                    <td>row1,cols2</td>
+                </tr>
+                <tr>
+                    <td>row2,cols1</td>
+                    <td>row2,cols2</td>
+                </tr>
+                <tr>
+                    <td>row3,cols1</td>
+                    <td>row3,cols2</td>
+                </tr>
+                <tr>
+                    <td>row4,cols1</td>
+                    <td>row4,cols2</td>
+                </tr>
+                <tr>
+                    <td>row5,cols1</td>
+                    <td>row5,cols2</td>
+                </tr>
+                <tr>
+                    <td>row6,cols1</td>
+                    <td>row6,cols2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p>==================</p>
+    <a href="06_css复合样式.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="08_css继承.html">下一页</a>
 </body>
 </html>
