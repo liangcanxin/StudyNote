@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>06_css复合样式</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            background:aliceblue;
+        }
+        #p1 {
+            font:bold normal 32px 楷体;
+            border: #000000 solid 1px;
+        }
+        #p1 {font-style: italic;}
+        #p2 {
+            font: normal italic 48px 宋体;
+            border: aqua dashed 2px;
+        }
+        #p3 {
+            font: normal 64px 微软雅黑;
+            border: dotted #dfdfdf 3px;
+        }
+    </style>
 </head>
 <body>
     <h1>06. css复合样式</h1>
+    <h2>写法</h2>
+    <p>复合样式的写法是通过空格的方式实现的。复合写法有的是不需要关系顺序的，例如background、border；而有的是需要关系顺序的，例如font</p>
+    <ol>
+        <li>background:red url() repeat 0 0;</li>
+        <li>border:1px red solid</li>
+        <li>font: <em>注：最少要有两个值&nbsp;&nbsp;size&nbsp;family(这两个值是有先后顺序的)</em>
+            <ul>
+                <li>font:weight style size family</li>
+                <li>font:style weight size family</li>
+                <li>font:weight style size/line-weight family</li>
+            </ul>
+        </li>
+    </ol>
+    <p><em>注：如果非要复合样式和单一样式混合去写的话，那么要先写复合样式，再写单一样式，这样单一样式才不会被覆盖掉</em></p>
+    <p>font和border样式示例如下所示</p>
+    <p id="p1">这是第一个font和border样式示例</p>
+    <p id="p2">这是第二个font和border样式示例</p>
+    <p id="p3">这是第三个font和border样式示例</p>
+    <p>==================</p>
+    <a href="05_css段落样式.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="07_css选择器.html">下一页</a>
 </body>
 </html>

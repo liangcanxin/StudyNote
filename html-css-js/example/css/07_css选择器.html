@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_css选择器</title>
+</head>
+<body>
+    <h1>07. css选择器</h1>
+    <h2>(1) id选择器</h2>
+    <p>写法：#elem{}&nbsp;-&gt;id="elem"</p>
+    <p>快捷键【div#elem+tab】&nbsp;-&gt;【&lt;div&nbsp;id="elem"&gt;】</p>
+    <p><em>注意</em></p>
+    <ol>
+        <li>id是唯一的，一个id在一个页面中只能出现一次，出现多次是不符合规范的</li>
+        <li>命名的规范，由字母、下划线、中划线和字母组成，其中，命名的第一个字符不能是数字</li>
+        <li>命名写法
+            <ul>
+                <li>驼峰写法：seachSmallButton/SearchSmallButton</li>
+                <li>短线写法：search-small-button</li>
+                <li>下划线写法：search_small_button</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>(2) class选择器</h2>
+    <p>写法：.elem{}&nbsp;-&gt;class="elem"</p>
+    <p>快捷键【div.elem+tab】&nbsp;-&gt;【&lt;div&nbsp;class="elem"】</p>
+    <p><em>注意</em></p>
+    <ol>
+        <li>class选择器是可以复用的</li>
+        <li>可以添加多个class样式(&lt;div&nbsp;class="box content"&gt;)
+        </li>
+        <li>多个样式的时候，样式的优先级根据css编写的顺序决定，而不是class属性中的顺序</li>
+        <li>标签+类的写法</li>
+    </ol>
+    <h2>(3) 标签选择器(tag选择器)</h2>
+    <p>写法：div{}&nbsp;-&gt;&nbsp;&lt;div&gt;&lt;/div&gt;</p>
+    <p>使用场景</p>
+    <ul>
+        <li>去掉某些标签的默认样式时使用</li>
+        <li>复杂的选择器中，如层次选择器</li>
+    </ul>
+    <h2>(4) 群组选择器(分组选择器)</h2>
+    <p>可以通过英文逗号的方式，给多个不同的选择器添加统一css样式，来达到代码的复用</p>
+    <h2>(5)通配选择器</h2>
+    <p>写法：*{}&nbsp;-&gt;&nbsp;div，ul，li，p，h1，h2...</p>
+    <p>注：尽量避免使用通配选择器，因为会给所有的标签添加样式，慎用</p>
+    <p>使用的场景：去掉所有标签的默认样式时</p>
+    <h2>(6)层次选择器</h2>
+    <ul>
+        <li>后代-&gt;&nbsp;&nbsp;&nbsp;&nbsp;m&nbsp;n{}</li>
+        <li>父子-&gt;&nbsp;&nbsp;&nbsp;&nbsp;m>n{}</li>
+        <li>兄弟-&gt;&nbsp;&nbsp;&nbsp;&nbsp;m~n{}当前m下面的所有兄弟n标签</li>
+        <li>相邻-&gt;&nbsp;&nbsp;&nbsp;&nbsp;m+n{}当前m下面的相邻的n标签</li>
+    </ul>
+    <h2>(7)属性选择器</h2>
+    <p>写法：M[attr]{}</p>
+    <p>注：匹配属性</p>
+    <ul>
+        <li>=：完全匹配</li>
+        <li>*=：部分匹配</li>
+        <li>^=：其实匹配</li>
+        <li>$=：结束匹配</li>
+        <li>[][][]：组合匹配</li>
+    </ul>
+    <h2>伪类选择器</h2>
+    <p>m:伪类{}</p>
+    <ul>
+        <li>:link&nbsp;&nbsp;&nbsp;&nbsp;访问前的样式&nbsp;&nbsp;&nbsp;&nbsp;(只能添加给a标签)</li>
+        <li>:visited&nbsp;&nbsp;&nbsp;&nbsp;访问后的样式&nbsp;&nbsp;&nbsp;&nbsp;(只能添加给a标签)</li>
+        <li>:hover&nbsp;&nbsp;&nbsp;&nbsp;鼠标移入时的样式&nbsp;&nbsp;&nbsp;&nbsp;(可以添加给所有标签)</li>
+        <li>:active&nbsp;&nbsp;&nbsp;&nbsp;鼠标按下时的样式&nbsp;&nbsp;&nbsp;&nbsp;(可以添加给所有标签)</li>
+        <li>:after/:before&nbsp;&nbsp;&nbsp;&nbsp;通过伪类的方式给元素添加一段文本内容，使用content属性</li>
+        <li>:checked/:disabled/:focus&nbsp;&nbsp;&nbsp;&nbsp;都是针对表单元素的</li>
+        <li>结构性伪类选择器
+            <ul>
+                <li>:nth-of-type()/:nth-child()&nbsp;&nbsp;&nbsp;&nbsp;角标是从1开始的，1表示第一项，2表示第二项|n值表示从0到无穷大，可用于表格的隔行换色，如2n/2n+1等
+                </li>
+                <li>:first-of-type/:last-of-type</li>
+                <li>:only-of-type</li>
+                <li>:nth-of-type()/:nth-child()&nbsp;&nbsp;&nbsp;&nbsp;type：类型；child：孩子</li>
+            </ul>
+        </li>
+    </ul>
+    <p>注：</p>
+    <ol>
+        <li>如果以上前四个伪类要都可以生效，一定要注意顺序：LVHA</li>
+        <li>对于前四个伪类，一般网站只这样去设置：
+            a{}&nbsp;&nbsp;&nbsp;&nbsp;a:hover{}
+        </li>
+    </ol>
+</body>
+</html>
