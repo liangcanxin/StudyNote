@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_css默认样式</title>
+</head>
+<body>
+    <h1>17. css默认样式</h1>
+    <h2>没有默认样式的：div、span</h2>
+    <h2>有默认样式的</h2>
+    <ul>
+        <li>body&nbsp;-&gt;&nbsp;margin:8px;</li>
+        <li>h1&nbsp;-&gt;&nbsp;margin:上下24.440px;font-weight:bold</li>
+        <li>p&nbsp;-&gt;&nbsp;margin:上下16px;</li>
+        <li>ul&nbsp;-&gt;&nbsp;margin:上下16px;padding:左40px;list-style:disc;</li>
+        <li>a&nbsp;-&gt;&nbsp;text-decoration:underline;</li>
+    </ul>
+    <h2>css reset</h2>
+    <h3>*{margin:0;padding:0;}</h3>
+    <ul>
+        <li>优点：不用考虑哪些标签有默认的margin和padding</li>
+        <li>缺点：稍微影响性能</li>
+        <li>body,p,h1,ul{margin:0;padding:0;}</li>
+    </ul>
+    <h3>ul{list-style:none;}</h3>
+    <h3>a{text-decoration:none;color:#666;}</h3>
+    <h3>img{display:block;}</h3>
+    <p>问题的现象：图片跟容器底部有一些空隙</p>
+    <ul>
+        <li>内联元素的对齐方式是按照文字基线对齐的，而不是文字底线对齐的</li>
+        <li>vertical-align:baseline; &nbsp;基线对齐方式：默认值</li>
+        <li>img{vertical-align:bottom;}解决方式是推荐的</li>
+    </ul>
+    <h2>写具体页面或一个布局效果的步骤：</h2>
+    <ol>
+        <li>写结构</li>
+        <li>css样式重置
+            <a href="https://www.cnblogs.com/codeplayer1999/articles/12335326.html">css重置推荐</a>
+        </li>
+        <li>写具体样式</li>
+    </ol>
+    <p>==================</p>
+    <a href="16_最大最小宽高.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="17_css默认样式.html">这是最后一页</a>
+</body>
+</html>

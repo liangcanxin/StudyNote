@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_css盒子模型</title>
+</head>
+<body>
+    <h1>10. css盒子模型</h1>
+    <h2>css盒子模型组成</h2>
+    <ul>
+        <li>content(可以理解为物品)</li>
+        <li>padding(可以理解为填充物)</li>
+        <li>border（可以理解为包装盒)</li>
+        <li>margin(可以理解为盒子与盒子之间的间距)</li>
+    </ul>
+    <h2>具体介绍</h2>
+    <h3>content</h3>
+    <p>表示内容区域，由width和height组成其大小</p>
+    <h3>padding</h3>
+    <p><em>内边距，也称内填充</em>，具体写法：</p>
+    <ul>
+        <li>只写一个值：30px(表示上下左右)</li>
+        <li>写两个值：30px 40px(表示上下、左右)</li>
+        <li>写四个值：30px 40px 50px 60px(表示上右下左)</li>
+    </ul>
+    <p>单一样式，如果设置其大小单位，只能写一个单位值</p>
+    <ul>
+        <li>padding-left</li>
+        <li>padding-right</li>
+        <li>padding-top</li>
+        <li>padding-bottom</li>
+    </ul>
+    <h3>margin</h3>
+    <p><em>外边距，也称外填充</em>，具体写法：</p>
+    <ul>
+        <li>只写一个值：30px(表示上下左右)</li>
+        <li>写两个值：30px 40px(表示上下、左右)</li>
+        <li>写四个值：30px 40px 50px 60px(表示上右下左)</li>
+    </ul>
+    <p>单一样式，如果设置其大小单位，只能写一个单位值</p>
+    <ul>
+        <li>margin-left</li>
+        <li>margin-right</li>
+        <li>margin-top</li>
+        <li>margin-bottom</li>
+    </ul>
+    <p>注：<em>padding和margin的区别</em></p>
+    <ol>
+        <li>背景色填充到margin以内的区域（不包括margin区域）</li>
+        <li>文字在content区域添加</li>
+        <li>padding不能为负数，而margin可以为负数</li>
+    </ol>
+    <h2>box-sizing</h2>
+    <p>盒尺寸，可以改变盒子模型的展示形态</p>
+    <p><strong>默认值</strong></p>
+    <p>content-box：width、height&nbsp;-&gt;&nbsp;content</p>
+    <p>border-box：width、height&nbsp;-&gt;&nbsp;content、padding、border</p>
+    <p>更改默认的使用场景</p>
+    <ul>
+        <li>不用再去计算一些px值</li>
+        <li>解决一些100%分配出界的问题</li>
+    </ul>
+    <h2>盒子模型的一些问题</h2>
+    <ul>
+        <li>margin叠加问题，出现在上下margin同时存在的时候，会取上下中值较大的作为叠加的值</li>
+        <li>margin传递问题，出现在嵌套的结构中，只是针对margin-top的问题</li>
+    </ul>
+    <h2>扩展知识</h2>
+    <ul>
+        <li>margin左右自适应是可以的，但是上下自适应是不行的（需要额外操作）</li>
+        <li>在盒子嵌套中，对于内部盒子，width、height不设置，对盒子模型的影响，会自动去计算容器的大小，节省代码</li>
+    </ul>
+    <p>==================</p>
+    <a href="09_css优先级.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="11_标签分类.html">下一页</a>
+</body>
+</html>

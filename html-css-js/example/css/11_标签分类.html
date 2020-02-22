@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_标签分类</title>
+</head>
+<body>
+    <h1>11. 标签分类</h1>
+    <h2>按类型：</h2>
+    <ul>
+        <li>block:div p ul li h1 ...
+            <ol>
+                <li>独占一行</li>
+                <li>支持CSS所有样式</li>
+                <li>不写width的时候，跟父元素的width相同</li>
+                <li>所占区域是一个矩形</li>
+            </ol>
+        </li>
+        <li>inline:span a em strong img ...
+            <ol>
+                <li>挨在一起</li>
+                <li>有些样式不支持，例如：width、height、margin、padding</li>
+                <li>不写width的时候，宽度由内容决定</li>
+                <li>所占的区域不一定是矩形</li>
+                <li>内联标签之间会有空隙，原因：换行产生的，可以通过写在同一行（不过一般不用inline布局，也就是可以不用考虑它。如果一定要处理，可以在其父元素加上font-size：0，然后在该元素中加入font-size：16px）</li>
+            </ol>
+        </li>
+        <li>inline-block:input select ...
+            （挨在一起，会有空隙，但是支持宽高）
+        </li>
+    </ul>
+    <p><em>注：</em>布局一般用块标签，修饰文本一般用内联标签</p>
+    <h2>按内容</h2>
+    <ul>
+        <li>FLOW：六内容/li>
+        <li>Metadata：元数据</li>
+        <li>Heading：标题</li>
+        <li>Sectioning：分区</li>
+        <li>Phrasing：措辞</li>
+        <li>Embedded：嵌入的</li>
+        <li>Interactive：互动的</li>
+    </ul>
+    <a href="https://www.w3.org/TR/html5/dom.html">详情可参考</a>
+    <h2>按显示</h2>
+    <ul>
+        <li>替换元素：浏览器根据元素的标签和属性，来决定元素的具体显示内容 img、input...</li>
+        <li>非替换元素：将内容直接告诉浏览器，将其显示出来 div、h1、p...</li>
+    </ul>
+    <p>==================</p>
+    <a href="10_css盒子模型.html">上一页</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="12_css显示框类型.html">下一页</a>
+</body>
+</html>

@@ -302,7 +302,7 @@
 
     扩展：
         1. margin左右自适应是可以的，但是上下自适应是不行的（需要额外操作）
-        2. width、height不设置，对盒子模型的影响，会自动去计算容器的大小，节省代码
+        2. 在盒子嵌套中，对于内部盒子，width、height不设置，对盒子模型的影响，会自动去计算容器的大小，节省代码
 
 13. 标签分类？
 
@@ -318,7 +318,7 @@
             2. 有些样式不支持，例如：width、height、margin、padding
             3. 不写width的时候，宽度由内容决定
             4. 所占的区域不一定是矩形
-            5. 内联标签之间会有空隙，原因：换行产生的
+            5. 内联标签之间会有空隙，原因：换行产生的，可以通过写在同一行（不过一般不用inline布局，也就是可以不用考虑它。如果一定要处理，可以在其父元素加上font-size：0，然后在该元素中加入font-size：16px）
 
         inline-block ：input、select ...
             1. 挨在一起，但是支持宽高
@@ -416,8 +416,8 @@
 
     一个容器怎么适应屏幕的高：
     容器加height：100%；  body：100%；  html：100%
-        html,body{height:100%}
-        .contrainer{height:100%}
+        html,body{height:100%;}
+        .contrainer{height:100%;}
 
 19. CSS默认样式？
 
@@ -445,7 +445,7 @@
 
         img{display:block;}
             问题的现象：图片跟容器底部有一些空隙
-                内联元素的对其方式是按照文字基线对齐的，而不是文字底线对齐的
+                内联元素的对齐方式是按照文字基线对齐的，而不是文字底线对齐的
                 vertical-align：baseline；  基线对齐方式：默认值
                 img{vertical-align:bottom;}  解决方式是推荐的
 
