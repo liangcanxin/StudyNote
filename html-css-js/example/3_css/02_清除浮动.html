@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_清除浮动</title>
+    <style>
+        /* #box1{width: 100px;height: 100px; background-color: red;float: right;}
+        #box2{width: 200px;height: 200px; background-color: blue;clear: both;} */
+
+        /* #box1{width: 200px;border: 1px black solid;overflow: hidden;}
+        #box2{width: 100px;height: 200px;background-color: red;float: left;}
+        .clear{clear: both;} */
+
+        #box1{width: 200px;border: 1px black solid;overflow: hidden;}
+        #box2{width: 100px;height: 200px;background-color: red;float: left;}
+        .clear：after{content:'';clear: both;display: block;}
+    </style>
+</head>
+<body>
+    <!-- <div id="box1"></div>
+    <div id="box2"></div> -->
+
+    <!-- <div id="box1">
+        <div id="box2"></div>
+        <div class="clear"></div>
+    </div>
+    <div>aaaaaa</div> -->
+
+    <div id="box1" class="clear">
+        <div id="box2"></div>
+        <div class="clear"></div>
+    </div>
+    <div>aaaaaa</div>
+</body>
+</html>

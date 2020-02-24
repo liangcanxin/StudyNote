@@ -157,7 +157,7 @@
         .elem{}     class="elem"
         注：
         1. class选择器是可以复用的
-        2. 可以添加多个class样式（笔者备注:<div class="box content">
+        2. 可以添加多个class样式（笔者备注:<div class="box content">，可以用于制作浮动的class外加原类，如class="menu l"，menu为原类，l是左浮动）
         3. 多个样式的时候，样式的优先级根据CSS编写的顺序决定，而不是class属性中的顺序
         4. 标签+类的写法
 
