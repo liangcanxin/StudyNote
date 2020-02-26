@@ -84,9 +84,96 @@
 
 7. map与area？
 
-    给特殊图形添加链接，area能添加的热区的形状有：矩形、圆形、多边形
+    给一个图形中的特殊区域添加链接，area能添加的热区的形状有：矩形、圆形、多边形
 
     area
         href：定义url
         shape：定义区域形状
+            取值：rect、circ、poly
         coords：定义热区的坐标
+            对于矩形图形，只需左上坐标和右下坐标即可
+            对于圆形，只需圆心坐标和圆形半径即可
+            对于多边形，需要各个轮廓点的坐标
+
+8. embed与object（用处少，了解）
+
+    给flash和一些插件进行渲染操作的标签
+
+    区别主要是浏览器兼容问题
+
+    此外，object元素需要配合param元素来完成
+
+9. audio与video
+
+    引入音频和视频的标签，属于H5的新功能
+
+    <audio src="" controls loop autoplay></audio>
+    controls使音频显示在窗口上，loop循环播放音频，autoplay自动播放
+
+    <video src="" controls loop autoplay></video>
+
+    <video>
+        <source src="choose1"></source>
+        <source src="choose2"></source>
+    </video>
+    source用来避免文件在不同浏览器播放不了而定义的备选方案
+
+    如果要定制音频视频的边框展示效果，需要配合js
+
+10. 文字注解与文字方向？
+
+    ruby、rt 这样一个组合实现文字注音或注解
+    
+    bdo标签可覆盖默认的文本方向，横向反向排列（也可以采用css实现）
+
+    要实现竖向排列文字，可以采用浮动，只要使每行只能容纳一个文字，就可以竖向浮动排列了
+
+11. link扩展学习
+
+    <link rel="stylesheet" type="text/css" href="theme.css">
+
+    <link rel="icon" type="/image/x-icon" href="http://www.mobiletrain.org/favicon.ico">
+    引入作用于网页标题(title)前的小图标
+
+    <link rel="dns-prefetch" href="//static.360buying.com">
+    dns预解析，使访问速度加快
+
+    link可以理解为引入外部文件资源
+
+12. meta扩展学习
+
+    meta用于添加一些辅助信息，用于网页优化渲染、搜索引擎搜索、渲染浏览器内核等等
+
+    <meta name="description" content="大连美团...">
+    <meta name="keywords" content="大连美团">
+    <meta name="renderer" content="webkit">（用于兼容内核）
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">（用于设置ie浏览器最高版本的网页视图）
+    <meta http-equiv="refresh" content="3" url="">（3s后跳转url）
+    <meta http-equiv="expires" content="Wed,20 Jun 2019 22:33:00 GMT">（用于缓存处理）
+
+    多关注大厂网站的代码，学习参考
+
+13. html5新语义化标签
+
+    header  ：页眉
+    footer  ：页脚
+    main    ：主体
+    hgroup  ：标题组合
+    nav     ：导航
+
+    注：header、footer、main在一个网页中只能出现一次
+
+    article ：独立的内容
+    aside   ：辅助信息的内容
+    section ：区域
+    figure  ：描述图像或视频，与figcaption配合使用
+    figcaption：描述图像或视频的标题部分
+
+    datalist：选项列表
+    details/summary：文档细节/文档标题（details有open属性）
+    progress/meter：定义进度条/定义度量范围
+    time    ：定义日期或时间
+    mark    ：带有记号的文本
+
+    上述的标签都可以用div，但是那样不利于语义化

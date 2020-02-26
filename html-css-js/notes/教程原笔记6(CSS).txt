@@ -1,0 +1,136 @@
+1. 表格扩展（css样式）
+
+    添加单线：border-collapse:collapse
+    隐藏空单元：empty-cells:hide
+    斜线分类(单元的表格分类)：border/rotate
+        {border-top:50px solid red;border-left:150px solid blue;position:relative;}（做出三角形，再隐藏颜色即可做出斜线效果）
+    列分组：colgroup/col
+
+2. 表单扩展（css样式）
+
+    美化表单控件：
+        1.  label ( + :checked )
+        2.  position + opacity
+
+        注：label标签可以增大选中选框的点击面积
+        第一种：
+        html:将原标签效果隐藏，选中图片
+            <label>
+                <input type="checkbox">
+                    <div></div>
+            </label>
+        css:
+            label input{display:none;}
+            label input:checked+div{background-position:0 0;}
+            label div{width:28px;height:28px;background:url() 0 -28px;}
+        第二种：实际点击的是透明层
+        html:
+            <div class="upload">
+                <input type="file">
+                <div></div>
+            </div>
+        css:
+            .upload{width:86px;height:34px;position:relative;}
+            .upload div{width:100%;height:100%;background:url();}
+            .upload input{width:100%;height:100%;position:absolute;left:0;top:0;opacity:0;}
+    
+    新的input控件
+        email:电子邮件地址输入框
+        url:网址输入框
+        number:数值输入框
+        range:滑动条
+        date/month/week:日期控件
+        search:搜索框
+        color:颜色控件
+        tel:电话号码输入框(在移动端会默认调用数字键盘)
+        time:时间控件
+    
+    新的表单属性
+        autocomplete：自动完成，默认：on 可改：off
+        autofocus：获取焦点
+        required：不能为空
+        pattern：正则验证
+
+    以下三个属性主要用于与后端交互
+        method：数据传输方式
+        enctype：数据传输类型
+        name/value：数据的键值对
+
+    表单扩展标签
+        fieldset：表单内元素分组
+        legend：为fieldset元素定义标题
+        optgroup：定义选项组
+
+3. BFC规范
+
+    BFC，具有BFC的元素相当于隔离的容器，容器内的元素不会在布局上影响到外面的元素，从而解决一些布局问题。
+
+    触发BFC：
+        浮动元素：float除none外的值
+        绝对定位元素：position(absolute、fixed)
+        display为inline-block、table-cells、flex
+        overflow除visible外的值(hidden、auto、scroll)
+
+    BFC特性及应用
+        解决margin叠加问题
+        解决margin传递问题
+        解决浮动问题
+        解决覆盖问题(形成管理后台的布局-一列固定一列自适应)
+
+4. 浏览器前缀(了解)
+
+    css3去兼容不同的浏览器，针对旧的浏览器做兼容，新浏览器基本不需要添加前缀
+
+    浏览器            内核        前缀
+    ie              Trident     -ms-
+    firefox         Gecko       -moz-
+    opera           Presto      -o-
+    chrome          Webkit      -webkit-
+    safari          Webkit      -webkit-
+    opera/chrome    Blink
+
+    内核：是浏览器实现解析生成页面的代码
+
+5. transition过渡(css属性)
+
+    transition-property：规定设置过渡效果的css属性的名称
+    transition-duration：规定完成过渡效果需要多少秒或毫秒
+    transition-delay：定义过渡效果何时开始(延迟：数值为正数，也可以提前，数值为负数)
+    transition-timing-function：规定速度效果的速度曲线
+        transition-timing-function：
+            linear
+            ease(默认值)
+            ease-in
+            ease-out
+            ease-in-out 
+            cubic-bezier
+            (http://cubic-bezier.com)
+
+    过渡属性一般应该添加在标签上，而不是含有伪类(hover)的标签，如果加在含有伪类的标签，一旦去除伪类，效果就会失效（不是多数人希望的效果）
+
+6. transform变形(css属性)
+
+    translate：位移
+        translateX
+        translateY
+        translateZ(3D效果)
+
+    scale：缩放（值是一个比例值，正常大小就是1，会以当前元素中心点进行缩放）
+        scaleX、scaleY、scaleZ
+
+    rotate：旋转（旋转的值，单位是角度deg，负值为逆时针旋转）
+        rotateX(3D)
+        rotateY(3D)
+        rotateZ(平面，和rotate本身一致)
+
+    skew：斜切
+        只有skewX和skewY，单位也是角度，正值向左倾斜，负值向右倾斜
+
+    transform注意事项：
+        1. 变形操作不影响其他元素
+        2. 变形操作只能添加给块元素，但是不能添加给内联元素
+        3. 复合写法，可以同时添加多个变形操作
+            执行是有顺序的，先执行后面的操作，再执行前面的操作
+            translate会受到 rotate、scale、skew 的影响
+        4. transform-orgin：变形基点位置    x y z(3D)
+        

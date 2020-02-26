@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table .line{border-top:50px solid red;border-left:150px solid blue;position:relative;color:white;}
+        table .line em{position: absolute;left: -60px;top:-40px;font-style: normal;}
+        table .line span{position: absolute;left:-120px;top: -30px;}
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col span="1" style="background-color: rosybrown;">
+            <col span="1" style="background-color:royalblue;">
+            <col span="1" style="background-color:sandybrown;">
+        </colgroup>
+        <tr>
+            <div>
+                <th>
+                    <div class="line">
+                        <em>详情</em>
+                        <span>日期</span>
+                    </div>
+                </th>
+                <th>标题1</th>
+                <th>标题2</th>
+            </div>
+        </tr>
+        <tr>
+            <td>cell1</td>
+            <td>cell2</td>
+            <td>cell3</td>
+            
+        </tr>
+        <tr>
+            <td>cell4</td>
+            <td>cell5</td>
+            <td>cell6</td>
+        </tr>
+    </table>
+</body>
+</html>
