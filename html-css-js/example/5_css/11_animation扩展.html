@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box1,.box2,.box3,.box4{width: 50px;height: 50px;background-color: red;margin: 5px;}
+        .box1{animation: 2s move 2s;}
+        .box2{animation: 2s move 2s;animation-fill-mode: backwards;}
+        .box3{animation: 2s move 2s;animation-fill-mode: forwards;}
+        .box4{animation: 2s move 2s;animation-fill-mode: both;}
+
+        @keyframes move {
+            0%{transform: translate(0,0);background-color: blue;}
+            100%{transform: translate(100px,0);}
+        } */
+
+        .div1{width: 100px;height: 100px;animation: 1s move infinite;background-color: red;}
+        .div2{width: 100px;height: 100px;animation: 1s move infinite;background-color: red;animation-direction: alternate;}
+        .div3{width: 100px;height: 100px;animation: 1s move infinite;background-color: red;animation-direction: reverse;}
+
+        @keyframes move {
+            0%{transform: translate(0,0);}
+            100%{transform: translate(300px,0);}
+        } 
+    </style>
+</head>
+<body>
+    <!-- <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div> -->
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+</body>
+</html>
