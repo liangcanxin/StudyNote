@@ -108,6 +108,8 @@
 
     过渡属性一般应该添加在标签上，而不是含有伪类(hover)的标签，如果加在含有伪类的标签，一旦去除伪类，效果就会失效（不是多数人希望的效果）
 
+    transition-delay在某些效果显示上很重要，不添加可能导致没有任何变化
+
 6. transform变形(css属性)
 
     translate：位移
@@ -163,3 +165,42 @@
         reverse：永远都是反向，从100%~0%
         normal（默认值）：永远都是正向，从0%~100%
         
+8. animate.css
+
+    一款强大的预设css3动画库
+        官网地址：https://daneden.github.io/animate.css/
+
+    基本使用：
+    class="animated 基类名 infinite"
+        animated：基类(基础的样式，每个动画效果都需要加)
+        infinite：动画的无限次数
+
+9. 3D操作
+
+    transform3D相关属性
+        rotateX():正值向上翻转
+        rotateY():正值向右翻转
+
+        translateZ():正值向前、负值向后
+
+        scaleZ():立体元素的厚度
+
+    3D写法
+        scale3d():三个值x y z 
+        translate3d():三个值x y z
+        rotate3d():四个值  0|1（x轴是否添加旋转角度） 0|1（y轴是否添加旋转角度） 0|1（z轴是否添加旋转角度） deg
+
+    3d相关属性
+
+        perspective:离屏幕多远的距离去观察元素，值越大幅度越小
+
+        perspective-orgin:景深-基点位置，观察元素的角度(区别于transform-orgin)
+
+        transform-orgin:x y z 
+            transform-origin: center center -50px;(Z轴的中心使用center没用，因为Z轴只能是数值，不能使用单词)
+
+        transform-style:
+            flat(默认值2d)、preserve-3d(3d，产生一个三维空间)
+            
+        backface-visibility:背面隐藏
+            hidden、visible(默认值)
