@@ -119,6 +119,7 @@
 
     scale：缩放（值是一个比例值，正常大小就是1，会以当前元素中心点进行缩放）
         scaleX、scaleY、scaleZ
+        可以使用scale实现图片的翻转放大缩小效果（不常用）
 
     rotate：旋转（旋转的值，单位是角度deg，负值为逆时针旋转）
         rotateX(3D)
@@ -204,3 +205,60 @@
             
         backface-visibility:背面隐藏
             hidden、visible(默认值)
+
+10. CSS3背景样式扩展
+
+    background-size:背景图的尺寸大小(可设置具体px值，很少这样设置)
+        cover:覆盖
+        contain:包含
+    background-orgin:背景图的填充位置
+        padding-box(默认):
+        border-box
+        content-box
+    background-clip:背景图的裁切方式
+        padding-box
+        border-box(默认):
+        content-box
+
+    注：当background以复合样式出现时，如果出现两个padding-box，第一个指代填充位置，第二个指代裁切方式
+
+11. CSS3渐变
+
+    渐变需要添加在background-image属性上
+
+    1. 线性渐变
+        linear-gradient：
+            point(to right/bottom/top/left)||angle(渐变的0deg在图像底部，正值按顺时针旋转，负值相反)
+            color
+            percentage(渐变区间，如25%表示从图片的25%位置才开始渐变)
+    
+    2. 径向渐变(用的不多)
+        radial-gradient：
+            point
+            color
+            percentage
+
+12. CSS3字体图标(P155)
+
+    font-face是CSS3中的一个模块，他主要是把自己定义的Web字体嵌入到你的网页中
+
+    好处：
+        1. 可以非常方便的改变大小和颜色
+            font-size color(跟字体改大小和颜色一样)
+        2. 放大后不会失真
+        3. 减少请求次数和提高加载速度
+        4. 简化网页布局
+        5. 减少设计师和前端工程师的工作量
+        6. 可使用计算机没有提供的字体
+
+    使用：
+        @font-face语法
+            像.woff等文件都是做兼容平台处理的，mac、Linux等
+
+    推荐：iconfont图标库
+
+    阿里巴巴矢量图标库：
+        https://www.iconfont.cn：提供大量免费的字体图标
+
+    自定义字体图标(需要会基本使用svg文件)：
+        https://icomoon.io/app：在线生成字体图标

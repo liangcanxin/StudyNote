@@ -286,7 +286,7 @@
                 1. 背景色填充到margin以内的区域（不包括margin区域）
                 2. 文字在content区域添加
                 3. padding不能为负数，而margin可以为负数
-                4. margin：30px auto;(在30px处，居中效果)
+                4. margin：30px auto;(在30px处，居中效果，此时需要同时设置width才能有居中效果)
 
     box-sizing ：
         盒尺寸，可以改变盒子模型的展示形态
