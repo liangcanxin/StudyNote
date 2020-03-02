@@ -52,3 +52,69 @@
 
     column-span:合并分栏
 
+8. 伪类与伪元素
+
+    CSS3中，规定伪类由一个冒号开始，然后为伪类的名称；伪元素由两个冒号开始，然后才是伪元素的名称
+
+    伪类本质上是为了弥补常规CSS选择器的不足，以便获取到更多信息。通常表示获取不存在与DOM树中的信息，或获取不能被常规CSS选择器获取的信息。如:hover、:focus、:empty ...
+
+    伪元素本质上是创建一个有内容的虚拟容器。这个容器不包含任何DOM元素，但是可以包含内容。另外，开发者还可以为伪元素定制样式。如::selection、::first-line/first-letter、::before/after ...
+
+    个人理解：伪类作用在容器身上，而伪元素是在容器内部创建虚拟容器，作用在虚拟容器上。
+
+9. CSS Hack(了解即可)
+
+    CSS Hack用来解决浏览器的兼容性问题，为不同版本的浏览器定制编写不同的CSS效果，使用每个浏览器单独识别的样式代码，控制浏览器的显示样式。
+
+    Hack分类
+        1. CSS属性前缀法
+            前缀标识        兼容浏览器
+                _           IE6及以下
+               +、*         IE6、IE7
+                \9      IE6、IE7、IE8、IE9
+                \0      IE8、IE9、IE10、IE11
+
+        2. 选择器前缀法
+            前缀标识        兼容浏览器
+              *html             IE6
+             *+html             IE7
+              :root      IE9及以上或现代浏览器
+
+        3. IE条件注释法(IE专有)
+            前缀标识                        兼容浏览器
+       <!--[if IE]>...<![endif]-->          IE9及以下 
+      <!--[if IE 7]>...<![endif]-->           IE7
+    <!--[if lte IE 7]>...<![endif]-->    IE7以下(lte表以下)
+    <!--[if gte IE 7]>...<![endif]-->    IE7以上(gte表以上)
+      <!--[if ! IE 7]>...<![endif]-->         非IE7
+
+    IE版本测试可以使用IETester软件
+
+10. IE低版本常见BUG(了解即可)
+
+    常见兼容问题
+        1. 透明度
+            IE8及以下版本不识别
+            兼容性写法：
+                .box{width:100px;height:100px;background:red;opacity:0.5;filter:alpha(opacity=50);}
+
+        2. 双边距
+            IE6及以下，存在float:left和margin-left:mpx时，会出现边距为设置左边距的两倍
+            兼容性写法：
+                .box{float:left;width:100px;height:100px;background:red;margin-left:50px;_display:inline;}
+
+        3. 最小高度
+            IE6及以下，height最小值为19px
+            兼容性写法：
+                .box{width:300px;height:3px;background:red;overflow:hidden;}
+
+        4. 图片边框
+            IE9及以下，当img标签包含在a标签内时，会出现图片带蓝色边框
+            兼容性写法：
+                img{border:none;}
+
+11. 渐进增强与优雅降级
+
+    渐进增强：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验
+
+    优雅降级：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容
