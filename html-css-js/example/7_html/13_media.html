@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{width: 100px;height: 100px;background-color: red;}
+
+        /* @media all and (min-width: 500px) and (max-width:700px){
+            #box{background-color: blue;}
+        } */
+
+        /* @media not all and (min-width: 500px) and (max-width:700px){
+            #box{background-color: blue;}
+        } */
+
+        @media all and (orientation: landscape){
+            #box{background-color: blue;}
+        }
+        @media all and (orientation: portrait){
+            #box{background-color: yellow;}
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

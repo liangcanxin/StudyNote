@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{width: 300px;height: 300px;border: 1px black solid;margin: 20px auto;display: flex;}
+        #box div{width: 50px;height: 50px;color: white;line-height: 50px;text-align: center;background-color: red;}
+        /* #box div:nth-child(2){order: 1;}
+        #box div:nth-child(3){order: -1;} */
+
+        /* #box div:nth-child(2){background-color: yellow;color: black;flex-grow: 1;} */
+        /* #box div:nth-child(2){background-color: yellow;color: black;flex-grow: 2;} */
+        #box div:nth-child(2){background-color: yellow;color: black;flex-grow: 1;}
+        #box div:nth-child(3){background-color: blue;color: black;flex-grow: 2;}
+
+        #box2{width: 300px;height: 300px;border: 1px black solid;margin: 20px auto;display: flex;}
+        #box2 div{width: 50px;height: 50px;color: white;line-height: 50px;text-align: center;background-color: red;}
+        #box2 div:nth-child(2){background-color: yellow;color: black; 
+        /* flex-shrink: 0;  */
+        /* flex-shrink: 2; */
+        /* width: 100px;
+        flex-basis: 50px; */
+        flex: 0 1 auto;
+        }
+        #box2 div:nth-child(1){align-self: center;}
+    </style>
+</head>
+<body>
+    <!-- <div id="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div> -->
+
+    <div id="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

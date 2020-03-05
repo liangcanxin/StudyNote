@@ -16,4 +16,316 @@
 
         4. flex弹性（推荐）
 
+2. flex弹性盒模型(主要做一维布局的)
+
+    display:flex;
+
+    作用在flex容器上        作用在flex子项上
+    flex-direction             order
+       flex-wrap             flex-grow
+       flex-flow            flex-shrink
+    justify-content          flex-basis
+      align-items               flex
+     align-content           align-self
+
+    1. 作用在flex容器上
+
+     flex-direction:用来控制子项整体布局方向，是从左往右还是从右往左，是从上往下还是从下往上
+            取值                    含义
+            row            默认值，显示为行。方向为当前文档水平流方向，默认情况下是从左往右
+         row-reverse       显示为行，但方向和row属性值是反的 
+            column         显示为列
+        column-reverse     显示为列，但方向和column属性值是反的
+
+    flex-wrap:用来控制子项整体单行显示还是换行显示
+            取值                    含义
+           nowrap          默认值，表示单行显示，不换行，自动调节宽度（在内容能放得下的情况下不溢出也不换行）
+            wrap           宽度不足换行显示
+        wrap-reverse       宽度不足换行显示，但是是从下往上开始，也就是原本换行在下面的子项现在跑到上面
+
+    flex-flow:是flew-direction和flex-wrap的缩写，表示flex布局的flow流动特性，第一个值表示方向，第二个值表示换行，中间用空格隔开
+
+    justify-content:决定了主轴方向上子项的对齐和分布方式
+            取值                    含义
+         flex-start         默认值，表现为起始位置对齐
+          flex-end          表现为结束位置对齐
+           center           表现为居中对齐
+        space-between       表现为两端对齐，between是中间的意思，意思是多余的空白间距只在元素中间区域分配
+        space-around        around是环绕的意思，表示每个flex子项两侧都环绕互不干扰的等宽的空白间距，最终视觉上边缘两侧的空白只有中间空白宽度一半
+        space-evenly        evenly是匀称、平等的意思，也就是视觉上，每个flex子项两侧空白间距完全相等
+
+    align-items:items指的是flex子项们，因此align-items指的是flex子项们相对于flex容器在侧轴方向上的对齐方式
+            取值                    含义
+           stretch          默认值，flex子项拉伸
+          flex-start        表现为容器顶部对齐
+           flex-end         表现为容器底部对齐
+            center          表现为垂直居中对齐
+
+    align-content:可以看成是和justify-content是相似且对立的属性，如果所有flex子项只有一行，则align-content属性是没有任何效果的
+            取值                    含义
+           stretch          默认值，flex子项拉伸
+          flex-start        表现为起始位置对齐
+           flex-end         表现为结束位置对齐
+            center          表现为居中对齐
+         space-between      表现为两端对齐 
+          space-around      每一行元素上下都享有独立不重叠的空白空间
+          space-evenly      每一行元素都完全上下等分
+
+    注：align-items指的是一行之间的对齐方式，align-content表示多行之间的对齐方式
+
+    2. 作用在flex子项上
+
+    order：可以通过设置order改变某一个flex子项的排序位置，所有flex子项的默认order属性值是0
+
+    flex-grow：属性中的grow是扩展的意思，扩展就是flex子项所占据的宽度，扩展所侵占的空间就是除去元素外的剩余的空白间隙，默认值为0，且取值不能小于0；取值范围为0~1，表示按比例占据剩余空间的宽度，大于等于1时，表示占满整个剩余空间
+
+    flex-shrink：属性中的shrink是“收缩”的意思，flex-shrink主要处理当flex容器空间不足时，单个元素的收缩比例，默认值为1；取值为0时，表示不收缩；大于1时，表示收缩更大
+
+    flex-basis：定义了在分配剩余空间之前元素的默认大小，效果和width相同，但是同时设置该值和width，按先后顺序决定最终展示效果；还有该值的使用产生效果的前提是还有剩余空间
+
+    flex：是flex-grow、flex-shrink和flex-basis的缩写，和单独写任一属性是存在区别的
+
+    align-self：控制单独某一个flex子项的垂直对齐方式；和align-items区别在于一个针对单独子项，一个针对整体
+
+3. Grid网格布局(二维布局，横纵方向同时存在)
+
+    作用在grid容器上             作用在grid子项上
+    grid-template-columns       grid-column-start
+    grid-template-rows          grid-column-end
+    grid-template-areas         grid-row-start
+    grid-template               grid-row-end
+    grid-column-gap             grid-column
+    grid-row-gap                grid-row
+    grid-gap                    grid-area
+    justify-items               justify-self
+    align-items                 align-self
+    place-items                 place-self
+    justify-content
+    align-content
+    place-content
+
+    1. grid-template-columns和grid-template-rows
+        对网格进行横纵划分，形成二维布局。单位可以是像素，百分比，自适应以及fr单位（网格剩余空间比例单位）
+        在网格已经划分好，如果需要添加多个横纵网格时，可以利用repeat()语法进行简化操作
+
+    2. grid-template-areas和grid-template
+        area是区域的意思，grid-template-areas就是给网格划分区域的，此时，grid子项只要使用grid-area属性指定其隶属于哪个区(必须形成的是矩形)
+        grid-template是grid-template-rows，grid-template-columns和grid-template-areas属性的缩写
+
+    3. grid-column-gap和grid-row-gap
+        grid-column-gap和grid-row-gap属性用来定义网格中网格间隙的尺寸
+        css grid-gap属性是grid-row-gap和grid-column-gap属性的缩写，用空格隔开
+
+    4. justify-items和align-items
+        justify-items指定网格元素的水平呈现方式，是水平拉伸显示，还是左中右对齐；align-items指定网格元素的垂直呈现方式，是垂直拉伸显示，还是上中下对齐
+        place-items可以让align-items和justify-items属性写在单个声明中
+
+            取值                        含义
+            stretch             默认值，拉伸，表现为水平或垂直填充
+            start               表现为容器左侧或顶部对齐
+            end                 表现为容器右侧或底部对齐
+            center              表现为水平或垂直居中对齐
+
+    5. justify-content和align-content
+        justify-content指定网格元素的水平分布方式，align-content指定网格元素的垂直分布方式
+        place-content可以让justify-content和align-content属性写在一个css声明中
+
+            取值                        含义
+            stretch             默认值，拉伸，表现为水平或垂直填充
+            start               表现为容器左侧或顶部对齐
+            end                 表现为容器右侧或底部对齐
+            center              表现为水平或垂直居中对齐
+            space-between       表现为两端对齐
+            space-around        享有dulling不重叠的空白空间
+            space-evenly        平均分配空白空间
+
+        justify-content和align-content与justify-items和align-items区别：前者针对的是所有网格，后者针对的是所在单个网格内的排布
+
+    6. 作用在grid子项上
+
+            取值                        含义
+            grid-column-start   水平方向上占据的起始位置
+            grid-column-end     水平方向上占据的结束位置(span属性)
+            grid-row-start      垂直方向上占据的起始位置
+            grid-row-end        垂直方向上占据的结束位置(span属性)
+            grid-column         grid-column-start+grid-column-end，斜线隔开
+            grid-row            grid-row-start+grid-row-end，斜线隔开
+            grid-area           表示当前网格所占用的区域，名字和位置两种表示方法（位置法：横纵横纵）
+            justify-self        单个网格元素的水平对齐方式
+            align-self          单个网格元素的垂直对齐方式
+            place-self          align-self+justify-self
+
+4. 移动端模拟器
+
+    切换平台之后，一定要重新刷新浏览器
+
+5. 去访问一些网站的PC端和移动端
+
+    大一点的网站都是分开开发的，PC端一套代码，移动端一套代码
+
+    访问淘宝网 -> 后端检测设备 -> 电脑 -> www.taobao.com
+
+    访问淘宝网 -> 后端检测设备 -> 移动端 -> www.taobao.com重定向 -> h5.m.taobao.com
+
+6. Viewport视口（用于移动端）
+
+    在移动端viewport视口就是浏览器显示页面内容的屏幕区域，在viewport中有两种视口，分别为visual viewport（可视视口）和layout viewport（布局视口）
+
+    visual Viewport视口固定大小跟屏幕大小相同，在上面，而layout viewport视口可改变大小，在下面。layout viewport默认大小为980px，可通过document.documentElement.clientWidth获取
+
+    现代网页需要将layout viewport设置成跟visual viewport等同大小，方便进行网页制作
+
+    viewport设置
+
+        通过<meta>标签进行设置，name属性指定viewport值，content属性进行视口配置
+
+        取值                        含义
+        width           设置layout viewport的宽度特定值，device-width表示自适应移动设备宽度
+        height          设置layout viewport的高度特定值，一般不进行设置
+        initial-scale   设置页面的初始缩放
+        minimum-scale   设置页面的最小缩放
+        maximum-scale   设置页面的最大缩放
+        user-scalable   设置页面能否进行缩放
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+7. 移动端适配方案
+
+    1. 百分比布局，也叫流式布局。代表：优酷、百度、天猫、腾讯
+    
+        文字流式（fluid）、控件弹性（flexible）、图片等比缩放（scale）
+
+        好处：大屏幕显示更多内容
+        坏处：宽屏下比例有一些不协调
+
+    2. 等比缩放布局，也叫rem布局。代表：网易、爱奇艺、淘宝、美团
+
+        单位：
+
+        em：是一个相对单位，1em等于当前元素或父元素的font-size值
+
+        rem：是一个相对单位，1rem等于根元素的font-size值
+
+        vw/vh：把屏幕分为100份，1vw等于屏幕宽的1%
+
+3. rem布局
+
+    动态设置font-size：
+
+    注：不管通过以下何种，都要给body重置一下font-size:16px
+
+    通过JS
+
+        layout viewport : document.documentElement.clientWidth
+        
+        iphone 6 : 375
+        iphone 6 plus : 414
+        
+        iphone 6 : document.documentElement.clientWidth/3.75 -> 100
+        iphone 6 plus : document.documentElement.clientWidth/3.75 -> 110.4
+
+        <script>
+            var fontsize = document.documentElement.clientWidth / 3.75;
+            document.documentElement.style.fontSize = fontsize + "px";
+        </script>
+
+        vscode 插件 ：px to rem
+
+    通过vw：把屏幕分为100份，屏幕宽等于100vw
+
+        iphone 375 1vw -> 3.75
+        iphone plus 414 1vw -> 4.14
+
+        html{font-size:26.66667vw;}
+
+4. 响应式布局
+
+    利用媒体查询，即media queries，可以针对不同的媒体类型定义不同的样式，从而实现响应式布局
+
+    媒体类型：一般选择all或screen
+
+    常见选项：
+        媒体类型
+        and、not
+        min-width、max-width
+        orientation:portrait(横屏)、orientation:landscape(竖屏)
+        <link>
+
+    <link rel="stylesheet" href="base.css" media="all and (min-width:400px)">
+
+    常见修改样式
+        display
+        float
+        width
+        注：响应式代码写到要适配的CSS后面
+
+5. 响应式布局的两种操作模式
+
+    1. 设置相同的class属性，然后在media不同的要求下设置不同的class样式（自动控制）
+
+    2. 设置不同的class属性，然后在标签中引用不同的class（手动控制）
+
+6. 响应式实际使用
+
+    可以采用<link>标签引入不同的像素屏幕下的css样式表
+
+    <link rel="stylesheet" href="base-samller.css" media="all and (max-width:400px)">
+
+    <link rel="stylesheet" href="base-bigger.css" media="all and (min-width:400.02px)">
+
+7. Bootstrap
+
+    Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局、移动设备优先的 WEB 项目
+
+    特色：
+        1. 响应式布局
+        2. 基于flex的栅格系统
+        3. 丰富的组件和工具方法
+        4. 常见交互使用
+
+    官网：https://getbootstrap.com
+
+    bootstrap.css(记住css的class)
+
+        Containers:
+        containers
+        container-fluid（通栏）
+        responsive breakpoints
+
+        Grid system:
+        Grid options（网格配置）
+        Responsive classes（class属性）
+        Gutters（间距）
+        Alignment（对齐方式）
+        Reordering（排序）
+        Offsetting（位置）
+        ...
+
+        Content:
+        reboot
+        typography
+        code
+        images
+        tables
+        figures
+        ...
+
+        Components
+        alerts
+        badge
+        breadcrumb
+        buttons
+        button group
+        card
+        ...
+
+        Utilities:
+        borders
+        clearfix
+        close icon 
+        colors
+        display
+        embed
+        ...
+
 

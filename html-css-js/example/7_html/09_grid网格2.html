@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width: 300px;height: 300px;border: 1px gray dotted;display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
+        }
+        .box div{background-color: red;border: 1px black solid;
+        /* grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: span 2; */
+        /* grid-row: 2 / sapn 2;
+        grid-column: 2 / 3; */
+        grid-area: 2 / 3 / 4 / 4;   
+        }
+
+        .box2{width: 300px;height: 300px;border: 1px gray dotted;display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
+        }
+        .box2 div{background-color: red;border: 1px black solid;}
+        .box2 div:nth-child(2){justify-self: start;align-self: end;}
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        <div></div>
+    </div> -->
+
+    <div class="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
