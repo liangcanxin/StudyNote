@@ -1,0 +1,25 @@
+1. Sass和Less
+
+    Sass和Less都是CSS预处理器
+
+    CSS预处理器定义了一种新的语言，其基本思想是用一种专门的编程语言，为CSS增加一些编程的特性：变量、语句、函数、继承等。将CSS作为目标生成文件，然后开发者就只要开始使用这种语言进行CSS的编码工作
+
+    官网：http://lesscss.org/
+    vscode插件：Easy LESS
+
+    官网：https//sass-lang.com/
+    vscode插件：Easy Sass
+
+    注：less后缀为.less；sass后缀为sass（老式写法）和scss（新式写法）
+
+    语法：
+        注释
+        变量、插值、作用域
+        选择器嵌套、伪类嵌套、属性嵌套（Sass）
+        运算、单位、转义、颜色
+        函数
+        混入、命名空间（Less）、继承
+        合并、媒体查询
+        条件、循环
+        导入
+        ...

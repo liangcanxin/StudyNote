@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*
+    多行注释，就是CSS的注释方式，会被编译出来
+*/
+.boxi {
+  width: 123px;
+  height: 123px;
+  margin: auto;
+}
+
+.box2 {
+  height: 123px;
+  width: 456px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul li {
+  float: left;
+}
+
+ul li div {
+  margin: 123px;
+}
+
+ul li p {
+  margin: 123px;
+}
+
+ul:hover {
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 宋体;
+}
+
+.box3 {
+  width: 300px;
+  font: 20px / 1.5;
+  padding: 20px / 1.5;
+  margin: 13.33333px;
+  color: #020406;
+}
+
+.box4 {
+  width: 4px;
+  height: 20%;
+  margin: 0.38833;
+  padding: sqrt(25%);
+  font-size: 9px;
+}
+
+.box5 {
+  width: 100px;
+  display: block;
+  color: blue;
+}
+
+.line, .box6, .box7 {
+  display: inline;
+}
+
+.box8 {
+  display: inline;
+}
+
+.box9 {
+  background: url(a.png), url(b.png);
+  transform: scale(2) rotate(30deg);
+}
+
+.box9 {
+  width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .box9 {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .box9 {
+    width: 900px;
+  }
+}
+
+.box10 {
+  width: 105px;
+}
+
+.box-0 {
+  width: 100px;
+}
+
+.box-1 {
+  width: 101px;
+}
+
+.box-2 {
+  width: 102px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
