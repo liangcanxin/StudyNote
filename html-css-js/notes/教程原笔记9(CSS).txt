@@ -23,3 +23,84 @@
         条件、循环
         导入
         ...
+
+2. PostCSS
+
+    PostCSS提供一种方式用JavaScript代码来处理CSS。利用PostCSS可以实现一些工程化的操作，如：自动添加浏览器前缀，代码合并，代码压缩等
+
+    官网：https://postcss.org/
+
+    安装：
+        1. 安装node环境
+        2. npm install postcss-cli-g
+        3. -o、-w 
+        4. postcss.config.js 
+
+    常用插件：
+        autoprefixer(css加前缀)
+        postcss-import(合并css文件)
+        cssnano(压缩css文件)
+        postcss-cssnext(处理高级的css语法，类似css预编译)
+        stylelint(语法检测，需要配置规则)
+        postcss-sprites(自动生成雪碧图)
+        ...
+
+3. CSS架构
+
+    首先要对CSS进行模块化处理，一个模块负责一类操作行为，可以利用Sass或Less来实现
+
+    模块分类（按文件夹）：
+
+            文件夹              含义
+            base            一些初始的通用CSS，如重置默认样式，动画，工具，打印等
+            components      用于构建页面的所有组件，如按钮、表单、表格、弹窗等
+            layout          用于布局页面的不同部分，如页眉、页脚、弹性布局、网格布局等
+            pages           放置页面之间不同的样式，如首页特殊样式，列表页特殊样式等
+            themes          应用不同的主题样式，如管理员、买家、卖家等
+            abstracts       放置一些如：变量，函数，响应式等辅助开发的部分
+            vendors         放置一些第三方独立的CSS文件，如bootstrap、iconfont等
+
+        如（每个单词为一个文件）：
+        abstracts:variables functions media 
+        base:reset typography animate utilities
+        components:alert buttom form table 
+        layout:flex grid header footer 
+        pages:index list detail goods 
+        themes:admin buyer seller tourist 
+
+4. CSS新特性（自定义属性）
+
+    也称“CSS变量”,在目前所有的现代浏览器中都得到了支持
+
+    主要作用有：定义与使用、计算、默认值、作用域
+
+5. CSS新特性（shapes）
+
+    CSS shapes布局可以实现不规则的文字环绕效果，需要和浮动配合使用
+
+    shape-outside(不规则环绕效果)
+    clip-path(剪切图形)
+    shape-margin(文字与图形的间距)
+
+6. CSS新特性（scrollbar）
+
+    CSS scrollbar用于实现自定义滚动条样式
+
+    ::-webkit-scrollbar 
+    ::-webkit-scrollbar-thumb
+    ::-webkit-scrollbar-track 
+
+7. CSS新特性（scroll snap）
+
+    CSS scroll snap（CSS滚动捕捉）允许你在用户完成滚动后锁定特定的元素或位置）
+
+    scroll-snap-type 
+        x
+        mandatory
+    
+    scroll-snap-align 
+        start
+        center
+        end 
+
+8. CSS与JavaScript结合
