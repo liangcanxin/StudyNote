@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var year = 2000;
+        var month = 2;
+        var date = 8;
+        var sum = 0;
+        switch(month){
+            case 12:
+                sum += 31;
+            case 11:
+                sum += 30;
+            case 10:
+                sum += 31;
+            case 9:
+                sum += 30;
+            case 8:
+                sum += 31;
+            case 7:
+                sum += 31;
+            case 6:
+                sum += 30;
+            case 5:
+                sum += 31;
+            case 4:
+                sum += 30;
+            case 3:
+                sum += 31;
+            case 2:
+                sum += 28;
+                if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+                    sum += 1;
+                    }
+            case 1:
+                sum += date;
+                break;
+            default:
+                alert("error");
+                break;
+        }
+        
+        alert("这是第" + sum + "天");
+
+        var week = Math.ceil(sum/7);
+        alert("这是第" + week + "周");
+
+    </script>
+</body>
+</html>

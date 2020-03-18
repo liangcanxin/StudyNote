@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数循环写法
+        // function sum(n){
+        //     var res = 0;
+        //     for(var i = 1; i <= n; i++){
+        //         res += i;
+        //     }
+        //     return res;
+        // }
+        // alert(sum(100));
+
+        //函数递归写法
+        function sum(n){
+            if(n == 1){
+                return 1;
+            }
+            return sum(n-1) + n;
+        }
+        alert(sum(100)); 
+    </script>
+</body>
+</html>

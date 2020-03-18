@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var arr1 = [10, 20, 30];
+        // var arr2 = [40, 50, 60];
+        // var newArr = arr1.concat(arr2, "hello", true);
+        // alert(newArr);
+        // alert(newArr.length);
+        // alert(arr1);
+
+        // var newArr2 = newArr.slice(2, 4);
+        // alert(newArr2);
+        // alert(newArr2.length);
+        // alert(newArr);
+
+        // //增加
+        // var array = [10, 20, 30, 40, 50];
+        // var res = array.splice(2, 0, "hello", "world");
+        // alert(array);
+        // alert(res);
+        // //删除
+        // var res2 = array.splice(1, 2);
+        // alert(array);
+        // alert(res2);
+        // //修改
+        // var res3 = array.splice(2, 1, "hello");
+        // alert(array);
+        // alert(res3);
+
+        // var arr = [10, 20, 30];
+        // var str = arr.join("==");
+        // alert(str);
+        // alert(arr);
+        // arr.reverse();
+        // alert(arr);
+
+        // var arr = [30, 40, 10, 20, 60];
+        // arr.sort();
+        // alert(arr);
+
+        // var arr = [1, 20, 5, 30];
+        // arr.sort();
+        // alert(arr);
+
+        var arr = [1, 20, 5, 30];
+        arr.sort(function(value1, value2){
+            return value1 - value2;
+        })
+        alert(arr);
+    </script>
+</body>
+</html>
