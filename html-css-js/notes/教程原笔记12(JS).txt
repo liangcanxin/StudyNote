@@ -1,0 +1,39 @@
+1. 严格模式
+
+    严格模式：写在哪个作用域下，在哪个作用域下生效
+        "use strict"
+    【注】尽量注意不要严格模式写在全局
+
+    用了严格模式，会有什么变化：
+    1. 全局变量声明时，必须加var
+    2. this无法指向全局对象
+    3. 函数内重名属性
+    4. arguments对象不允许被动态改变
+    5. 新增部分保留字
+
+2. ECMA5新增的数组方法
+
+    indexOf()
+        格式：数组.indexof(item, start);
+        参数：item  任意的数组
+             start  下标，可以不传入，默认值0
+        功能：在数组中查找第一次出现item元素下标，从start开始去查找
+        返回值：-1  没有查找到
+                >=0 查找到的元素的下标
+
+    forEach数组遍历
+        格式：数组.forEach(function(item, index, arr){...})
+        参数：item当前遍历到的元素
+             index当前遍历到元素的下标
+             arr数组本身
+
+    map()
+        格式：数组.map(function(item, index, arr){...})
+        功能：映射，但不改变原数组
+
+    filter()
+        格式：数组.filter(function(item, index, arr){...})
+        功能：实现筛选过滤
+
+    reduce()
+        格式：数组
